@@ -21,41 +21,53 @@
                 <a href="#projects" class="hover:text-accent transition">Projekte</a>
                 <a href="#contact" class="hover:text-accent transition">Kontakt</a>
             </div>
+            <button id="menuToggle" class="md:hidden p-2 -mr-2 text-white hover:text-accent transition" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
+                <i id="menuIcon" class="fas fa-bars text-lg"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-black/95">
+            <div class="max-w-6xl mx-auto px-6 py-2 flex flex-col text-sm uppercase tracking-widest font-medium">
+                <a href="#home" class="py-3 hover:text-accent transition border-b border-white/5">Home</a>
+                <a href="#about" class="py-3 hover:text-accent transition border-b border-white/5">Profil</a>
+                <a href="#experience" class="py-3 hover:text-accent transition border-b border-white/5">Werdegang</a>
+                <a href="#projects" class="py-3 hover:text-accent transition border-b border-white/5">Projekte</a>
+                <a href="#contact" class="py-3 hover:text-accent transition">Kontakt</a>
+            </div>
         </div>
     </nav>
 
-    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-6">
-        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+    <section id="home" class="min-h-screen flex items-center justify-center pt-24 pb-12 md:pt-16 md:pb-0 px-6">
+        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div class="flex justify-center order-first md:order-last reveal">
+                <div class="relative w-44 h-44 md:w-80 md:h-80">
+                    <div class="absolute inset-0 border-2 border-accent rounded-full translate-x-4 translate-y-4"></div>
+                    <div class="absolute inset-0 bg-zinc-800 rounded-full overflow-hidden border-2 border-white/10">
+                        <img src="./ressources/Portrait.jpg" alt="Portrait von Mathias Puchberger"
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+                    </div>
+                </div>
+            </div>
             <div class="reveal">
-                <h2 class="text-accent code-font mb-4 uppercase tracking-widest">Software Entwickler .NET</h2>
-                <h1 class="text-5xl md:text-7xl font-bold mb-6">Mathias <span class="text-accent">Puchberger</span></h1>
+                <h2 class="text-accent code-font mb-4 uppercase tracking-widest text-sm md:text-base">Software Entwickler .NET</h2>
+                <h1 class="text-4xl md:text-7xl font-bold mb-6">Mathias <span class="text-accent">Puchberger</span></h1>
                 <div class="mb-8 max-w-md">
                     <div class="flex flex-wrap gap-2 my-2">
                         <span class="badge">.C#</span>
                         <span class="badge">SQL</span>
                         <span class="badge">Vue</span>
                         <span class="badge">Projektleitung</span>
-                        <span class="badge">Inbetriebnahme</span>
-                        <span class="badge">Kundenbetreuung</span>
-                        <span class="badge">Support</span>
+                        <span class="badge hidden sm:inline-block">Inbetriebnahme</span>
+                        <span class="badge hidden sm:inline-block">Kundenbetreuung</span>
+                        <span class="badge hidden sm:inline-block">Support</span>
                     </div>
                 </div>
-                <div class="flex flex-wrap gap-4">
+                <div class="flex flex-col sm:flex-row gap-4">
                     <a href="#about"
-                        class="bg-accent text-black font-bold py-3 px-8 rounded hover:bg-green-400 transition">Mehr
+                        class="bg-accent text-black font-bold py-3 px-8 rounded hover:bg-green-400 transition text-center">Mehr
                         erfahren</a>
                     <a href="#projects"
-                        class="border border-white/20 py-3 px-8 rounded hover:bg-white/5 transition">Projekte
+                        class="border border-white/20 py-3 px-8 rounded hover:bg-white/5 transition text-center">Projekte
                         ansehen</a>
-                </div>
-            </div>
-            <div class="flex justify-center reveal">
-                <div class="relative w-64 h-64 md:w-80 md:h-80">
-                    <div class="absolute inset-0 border-2 border-accent rounded-full translate-x-4 translate-y-4"></div>
-                    <div class="absolute inset-0 bg-zinc-800 rounded-full overflow-hidden border-2 border-white/10">
-                        <img src="./ressources/Portrait.jpg" alt="Portrait von Mathias Puchberger"
-                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
-                    </div>
                 </div>
             </div>
         </div>
@@ -286,10 +298,13 @@
                     </p>
                     <div class="flex flex-wrap gap-2 mb-8">
                         <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">C#</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">ASP.NET Core</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Blazor</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">ASP.NET Core (.NET 10)</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Vertical Slice Architecture</span>
                         <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">EF Core</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">OpenIddict</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">OpenIddict (OAuth2)</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">REST</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">T-SQL</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Blazor Hybrid</span>
                     </div>
                     <button onclick="openModal('kapazitaet')"
                         class="mt-auto w-full inline-flex justify-center items-center bg-zinc-800 border border-white/10 text-white font-medium py-3 px-4 rounded hover:bg-accent hover:text-black transition cursor-pointer">
@@ -311,10 +326,14 @@
                     </p>
                     <div class="flex flex-wrap gap-2 mb-8">
                         <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">C#</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">ASP.NET Core</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Vue.js</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">JWT</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">ASP.NET Core (.NET 10)</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Clean Architecture</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">EF Core</span>
                         <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">SQLite</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">JWT</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Vue.js</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Vite</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">REST</span>
                     </div>
                     <button onclick="openModal('event')"
                         class="mt-auto w-full inline-flex justify-center items-center bg-zinc-800 border border-white/10 text-white font-medium py-3 px-4 rounded hover:bg-accent hover:text-black transition cursor-pointer">
@@ -336,10 +355,11 @@
                     </p>
                     <div class="flex flex-wrap gap-2 mb-8">
                         <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">C#</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Vue.js</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Three.js</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">ASP.NET (.NET 8)</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Visual Basic (Legacy)</span>
                         <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">T-SQL</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Legacy Migration</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Vue.js</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">three.js</span>
                     </div>
                     <button onclick="openModal('kvh')"
                         class="mt-auto w-full inline-flex justify-center items-center bg-zinc-800 border border-white/10 text-white font-medium py-3 px-4 rounded hover:bg-accent hover:text-black transition cursor-pointer">
@@ -361,10 +381,12 @@
                     </p>
                     <div class="flex flex-wrap gap-2 mb-8">
                         <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">C#</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">ASP.NET (.NET 8)</span>
                         <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Vue.js</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Three.js</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">MQTT</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">three.js</span>
                         <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">T-SQL</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">MQTT</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">XML</span>
                     </div>
                     <div class="mt-auto flex flex-col gap-3">
                         <button onclick="openModal('abbund')"
@@ -373,8 +395,8 @@
                         </button>
                         <!-- <a href="./ressources/Tätigkeitsbeschreibung.pdf" target="_blank"
                             class="w-full inline-flex justify-center items-center bg-zinc-800 border border-white/10 text-white font-medium py-3 px-4 rounded hover:bg-accent hover:text-neutral-400 transition">
-                            <i class="fas fa-file-alt mr-2"></i> Tätigkeitsbeschreibung (WKO) -->
-                        </a>
+                            <i class="fas fa-file-alt mr-2"></i> Tätigkeitsbeschreibung (WKO)
+                        </a> -->
                     </div>
                 </div>
 
@@ -416,7 +438,8 @@
                     <i class="fas fa-xmark"></i>
                 </button>
             </div>
-            <p id="modalDescription" class="text-gray-400 text-sm leading-relaxed mb-6"></p>
+            <p id="modalDescription" class="text-gray-400 text-sm leading-relaxed mb-3"></p>
+            <p id="modalTeamInfo" class="text-xs text-gray-400 mb-6 hidden"></p>
             <div id="modalBullets" class="space-y-3 mb-8"></div>
             <div>
                 <p class="text-xs uppercase tracking-widest text-gray-500 mb-3">Stack</p>
