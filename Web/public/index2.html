@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathias Puchberger | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e7eb;
+        }
+
+        .text-accent {
+            color: #22c55e;
+        }
+
+        /* Tailwind green-500 */
+        .bg-accent {
+            background-color: #22c55e;
+        }
+
+        .border-accent {
+            border-color: #22c55e;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .code-font {
+            font-family: 'Fira Code', monospace;
+        }
+
+        /* Glassmorphism Effekt für Karten */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <span class="code-font font-bold text-accent tracking-tighter text-xl">m.puchberger_</span>
+            <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-medium">
+                <a href="#home" class="hover:text-accent transition">Home</a>
+                <a href="#about" class="hover:text-accent transition">Profil</a>
+                <a href="#experience" class="hover:text-accent transition">Erfahrung</a>
+                <a href="#projects" class="hover:text-accent transition">Projekte</a>
+                <a href="#contact" class="hover:text-accent transition">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center pt-16 px-6">
+        <div class="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <h2 class="text-accent code-font mb-4 uppercase tracking-widest">Software Entwickler .NET & Web</h2>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6">Mathias <span class="text-accent">Puchberger</span></h1>
+                <p class="text-gray-400 text-lg mb-8 max-w-lg leading-relaxed">
+                    Ich entwickle robuste Softwarelösungen an der Schnittstelle zwischen Industrie-Steuerung und
+                    moderner Web-Visualisierung.
+                    Vom Leitrechner bis zum 3D-Monitoring.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#experience"
+                        class="bg-accent text-black font-bold py-3 px-8 rounded hover:bg-green-400 transition">Erfahrung
+                        ansehen</a>
+                    <a href="#contact"
+                        class="border border-white/20 py-3 px-8 rounded hover:bg-white/5 transition">Kontakt</a>
+                </div>
+            </div>
+            <div class="flex justify-center reveal">
+                <div class="relative w-64 h-64 md:w-80 md:h-80">
+                    <div class="absolute inset-0 border-2 border-accent rounded-full translate-x-4 translate-y-4"></div>
+                    <div class="absolute inset-0 bg-zinc-800 rounded-full overflow-hidden border-2 border-white/10">
+                        <img src="./ressources/Portrait.jpg" alt="Portrait von Mathias Puchberger"
+                            class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-zinc-900/50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="md:col-span-2 reveal">
+                    <h3 class="text-3xl font-bold mb-6">Profil</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Erfahrener Software Entwickler im .NET Bereich, der das Motto „Learning by Doing“ lebt. In
+                        meiner Ausbildung lernte ich
+                        hauptsächlich den .NET Stack sowie SQL kennen. Über die letzten vier Jahre konnte ich diese
+                        Kenntnisse vertiefen
+                        und ein fundiertes Verständnis in der Frontend-Entwicklung mit Vue.js und Blazor aufbauen.
+                    </p>
+                    <p class="text-gray-300 leading-relaxed">
+                        Ich finde mich in modernen Umgebungen ebenso zurecht wie in Projekten mit Delphi oder Visual
+                        Basic.
+                        Meine Arbeitsweise ist geprägt durch technische Verantwortung – von der Konzeption über die
+                        Inbetriebnahme beim Kunden
+                        bis hin zum Support.
+                    </p>
+                    <div class="grid grid-cols-2 mt-8 gap-4">
+                        <div>
+                            <span class="block text-accent font-bold text-2xl">4+</span>
+                            <span class="text-xs uppercase text-gray-500 tracking-widest">Jahre Erfahrung</span>
+                        </div>
+                        <div>
+                            <span class="block text-accent font-bold text-2xl">Ing.</span>
+                            <span class="text-xs uppercase text-gray-500 tracking-widest">WKO Zertifiziert</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal" style="transition-delay: 200ms;">
+                    <h3 class="text-xl font-bold mb-6 border-b border-accent pb-2 inline-block">Core Skills</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Backend & DB</p>
+                            <p class="font-semibold">C#, .NET Core, SQL Server</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Frontend</p>
+                            <p class="font-semibold">Vue.js, Blazor, Three.js, Tailwind</p>
+                        </div>
+                        <div>
+                            <p class="text-sm text-gray-400 mb-1">Methodik</p>
+                            <p class="font-semibold">Projektleitung, Inbetriebnahme, Support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12 text-center reveal">Berufsweg</h3>
+
+            <div class="space-y-12">
+                <div class="relative pl-8 border-l-2 border-accent/30 reveal">
+                    <div class="absolute w-4 h-4 bg-accent rounded-full -left-[9px] top-0 shadow-[0_0_10px_#22c55e]">
+                    </div>
+                    <span class="text-accent code-font text-sm italic">02/2023 – Heute</span>
+                    <h4 class="text-xl font-bold">Softwareentwickler | TimberTec</h4>
+                    <p class="text-gray-400 mt-2">
+                        Konzeption von Leitrechnern und Schnittstellen zu SPS-Maschinen. Verantwortung für technische
+                        Projektplanung
+                        und Inbetriebnahmen direkt beim Kunden.
+                    </p>
+                </div>
+
+                <div class="relative pl-8 border-l-2 border-accent/30 reveal">
+                    <div class="absolute w-4 h-4 bg-gray-600 rounded-full -left-[9px] top-0"></div>
+                    <span class="text-gray-500 code-font text-sm italic">03/2022 – 02/2023</span>
+                    <h4 class="text-xl font-bold">Softwareentwickler | Fabasoft</h4>
+                    <p class="text-gray-400 mt-2">
+                        Digitalisierung von Geschäftsprozessen in der Fabasoft Cloud. Fokus auf automatisierte Tests und
+                        Wartung.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 bg-zinc-900/50 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h3 class="text-3xl font-bold mb-12 reveal">Ausgewählte Projekte</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <div class="glass-card p-8 rounded-xl reveal">
+                    <span class="text-accent text-xs font-bold uppercase tracking-widest">2024</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-4">Integration Abbund-Maschinen</h4>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        Automatisierte Schnittstelle zwischen ERP, SPS und CNC. Highlight: Webbasiertes 3D-Monitoring
+                        via Three.js zur Optimierung des Materialflusses.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/10 px-3 py-1 rounded text-xs">.NET</span>
+                        <span class="bg-white/10 px-3 py-1 rounded text-xs">Three.js</span>
+                        <span class="bg-white/10 px-3 py-1 rounded text-xs">SPS-Schnittstellen</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-xl reveal" style="transition-delay: 200ms;">
+                    <span class="text-accent text-xs font-bold uppercase tracking-widest">2025</span>
+                    <h4 class="text-2xl font-bold mt-2 mb-4">Modernisierung KVH-Linie</h4>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        Migration einer Visual Basic Steuerung auf einen C# LogicServer. Entwicklung eines
+                        Saugkran-Pufferlagers mit 3D-Visualisierung.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-white/10 px-3 py-1 rounded text-xs">C#</span>
+                        <span class="bg-white/10 px-3 py-1 rounded text-xs">Legacy-Migration</span>
+                        <span class="bg-white/10 px-3 py-1 rounded text-xs">Web-3D</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h3 class="text-4xl font-bold mb-8">Bereit für neue <span class="text-accent">Herausforderungen</span>?</h3>
+            <div class="grid md:grid-cols-2 gap-6 mt-12">
+                <div class="p-6 border border-white/10 rounded-lg hover:border-accent transition">
+                    <i class="fas fa-envelope text-accent text-2xl mb-4"></i>
+                    <p class="block text-lg">testmail@gmail.com</p>
+                </div>
+                <div class="p-6 border border-white/10 rounded-lg hover:border-accent transition">
+                    <i class="fas fa-phone text-accent text-2xl mb-4"></i>
+                    <p class="block text-lg">+43 664 123456</p>
+                </div>
+            </div>
+            <p class="mt-16 text-gray-500 text-sm">
+                4113 St. Martin i.M • Ingenieur-Zertifizierung 2026
+            </p>
+        </div>
+    </section>
+
+    <script>
+        // Simple Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+
+</body>
+
+</html>
