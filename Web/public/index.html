@@ -201,89 +201,105 @@
             </div>
 
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass-card p-8 rounded-xl reveal border-l-4 border-l-accent">
+
+                <!-- Kapazitätsplanung -->
+                <div class="glass-card p-8 rounded-xl reveal border-l-4 border-l-accent flex flex-col">
                     <div class="flex justify-between items-start mb-4">
-                        <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded">2024</span>
+                        <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded">12/2025 – heute</span>
+                        <span class="bg-white/10 text-gray-400 text-xs font-bold px-3 py-1 rounded">TimberTec</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">Kapazitätsplanung</h4>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        WebApp zur Kapazitätsplanung und Ressourcenübersicht für die Holzbau-Produktion mit automatisierter Datenanbindung an das TiCom-ERP.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">C#</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">ASP.NET Core</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Blazor</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">EF Core</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">OpenIddict</span>
+                    </div>
+                    <button onclick="openModal('kapazitaet')"
+                        class="mt-auto w-full inline-flex justify-center items-center bg-zinc-800 border border-white/10 text-white font-medium py-3 px-4 rounded hover:bg-accent hover:text-black transition cursor-pointer">
+                        <i class="fas fa-circle-info mr-2"></i> Details
+                    </button>
+                </div>
+
+                <!-- Event Administration -->
+                <div class="glass-card p-8 rounded-xl reveal border-l-4 border-l-accent flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded">05/2025 – heute</span>
+                        <span class="bg-white/10 text-gray-400 text-xs font-bold px-3 py-1 rounded">Privat</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">Event Administration</h4>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        WebApp zur digitalen Verwaltung von Helfern und Personaleinteilungen für mehrtägige Events inkl. automatisierter SMS-Benachrichtigung.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">C#</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">ASP.NET Core</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Vue.js</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">JWT</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">SQLite</span>
+                    </div>
+                    <button onclick="openModal('event')"
+                        class="mt-auto w-full inline-flex justify-center items-center bg-zinc-800 border border-white/10 text-white font-medium py-3 px-4 rounded hover:bg-accent hover:text-black transition cursor-pointer">
+                        <i class="fas fa-circle-info mr-2"></i> Details
+                    </button>
+                </div>
+
+                <!-- Modernisierung KVH-Produktionslinie -->
+                <div class="glass-card p-8 rounded-xl reveal border-l-4 border-l-accent flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded">06/2024 – 08/2025</span>
+                        <span class="bg-white/10 text-gray-400 text-xs font-bold px-3 py-1 rounded">TimberTec</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3">Modernisierung KVH-Produktionslinie</h4>
+                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
+                        Migration einer Visual Basic Anlagensteuerung auf einen modernen .NET C# LogicServer inkl. webbasierter 3D-Visualisierung zur Anlagenüberwachung.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">C#</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Vue.js</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Three.js</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">T-SQL</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Legacy Migration</span>
+                    </div>
+                    <button onclick="openModal('kvh')"
+                        class="mt-auto w-full inline-flex justify-center items-center bg-zinc-800 border border-white/10 text-white font-medium py-3 px-4 rounded hover:bg-accent hover:text-black transition cursor-pointer">
+                        <i class="fas fa-circle-info mr-2"></i> Details
+                    </button>
+                </div>
+
+                <!-- Integration Abbund-Maschinen -->
+                <div class="glass-card p-8 rounded-xl reveal border-l-4 border-l-accent flex flex-col">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded">11/2023 – 06/2024</span>
                         <span class="bg-white/10 text-gray-400 text-xs font-bold px-3 py-1 rounded">TimberTec</span>
                     </div>
                     <h4 class="text-2xl font-bold mb-3">Integration Abbund-Maschinen</h4>
                     <p class="text-gray-400 mb-6 text-sm leading-relaxed">
-                        Komplette technische Umsetzung einer automatisierten Schnittstelle zwischen ERP, SPS-Steuerung
-                        und CNC-Maschinen. Optimierung des Materialflusses via Kran-Puffersystem.
+                        Integration von Abbund-Maschinen in die bestehende BSH-Produktionslinie. Automatisierung und Optimierung des Materialflusses.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">.NET</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Three.js</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">SQL</span>
-                    </div>
-                    <a href="./ressources/Tätigkeitsbeschreibung.pdf" target="_blank"
-                        class="w-full inline-flex justify-center items-center bg-zinc-800 border border-white/10 text-white font-medium py-3 px-4 rounded hover:bg-accent hover:text-neutral-400 transition">
-                        <i class="fas fa-file-alt mr-2"></i> Tätigkeitsbeschreibung (WKO)
-                    </a>
-                </div>
-
-                <div class="glass-card p-8 rounded-xl reveal border-l-4 border-l-accent">
-                    <div class="flex justify-between items-start mb-4">
-                        <!-- <span class="bg-white/10 text-gray-400 text-xs font-bold px-3 py-1 rounded">2025</span> -->
-                        <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded">2025</span>
-                        <span class="bg-white/10 text-gray-400 text-xs font-bold px-3 py-1 rounded">TimberTec</span>
-                        <!-- <i class="fas fa-microchip text-white/20 text-2xl"></i> -->
-                    </div>
-                    <h4 class="text-2xl font-bold mb-3">Modernisierung KVH-Produktionslinie</h4>
-                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
-                        Migration einer Visual Basic Anlagensteuerung auf einen modernen .NET C# LogicServer inkl.
-                        webbasierter 3D-Visualisierung zur Anlagenüberwachung.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Legacy Migration</span>
                         <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">C#</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Real-time Web</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Vue.js</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Three.js</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">MQTT</span>
+                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">T-SQL</span>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-3">
+                        <button onclick="openModal('abbund')"
+                            class="w-full inline-flex justify-center items-center bg-zinc-800 border border-white/10 text-white font-medium py-3 px-4 rounded hover:bg-accent hover:text-black transition cursor-pointer">
+                            <i class="fas fa-circle-info mr-2"></i> Details
+                        </button>
+                        <a href="./ressources/Tätigkeitsbeschreibung.pdf" target="_blank"
+                            class="w-full inline-flex justify-center items-center bg-zinc-800 border border-white/10 text-white font-medium py-3 px-4 rounded hover:bg-accent hover:text-neutral-400 transition">
+                            <i class="fas fa-file-alt mr-2"></i> Tätigkeitsbeschreibung (WKO)
+                        </a>
                     </div>
                 </div>
 
-                <div class="glass-card p-8 rounded-xl reveal border-l-4 border-l-accent">
-                    <div class="flex justify-between items-start mb-4">
-                        <!-- <span class="bg-white/10 text-gray-400 text-xs font-bold px-3 py-1 rounded">2025</span> -->
-                        <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded">2025</span>
-                        <span class="bg-white/10 text-gray-400 text-xs font-bold px-3 py-1 rounded">Privat</span>
-                        <!-- <i class="fas fa-microchip text-white/20 text-2xl"></i> -->
-                    </div>
-                    <h4 class="text-2xl font-bold mb-3">Bangkok Smile - Thai Massage</h4>
-                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
-                        Konzeption und Realisierung einer einfachen, benutzerfreundlichen Website für ein Massagestudio.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">HTML</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">CSS</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Tailwind</span>
-                    </div>
-                    <a href="https://www.bangkoksmile.at" target="_blank"
-                        class="w-full inline-flex justify-center items-center bg-zinc-800 border border-white/10 text-white font-medium py-3 px-4 rounded hover:bg-accent hover:text-neutral-400 transition">
-                        <i class="fas fa-arrow-up-right-from-square mr-2"></i> Website
-                    </a>
-                </div>
-
-                <div class="glass-card p-8 rounded-xl reveal border-l-4 border-l-accent">
-                    <div class="flex justify-between items-start mb-4">
-                        <!-- <span class="bg-white/10 text-gray-400 text-xs font-bold px-3 py-1 rounded">2025</span> -->
-                        <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded">2021</span>
-                        <span class="bg-white/10 text-gray-400 text-xs font-bold px-3 py-1 rounded">Privat</span>
-                        <!-- <i class="fas fa-microchip text-white/20 text-2xl"></i> -->
-                    </div>
-                    <h4 class="text-2xl font-bold mb-3">Tao's Fruehlingsollen</h4>
-                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">
-                        Konzeption und Realisierung einer Website für einen Unternehmen aus der Famile.
-                    </p>
-                    <div class="flex flex-wrap gap-2 mb-8">
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">HTML</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">CSS</span>
-                        <span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">Tailwind</span>
-                    </div>
-                    <a href="https://www.taosfruehlingsrollen.at" target="_blank"
-                        class="w-full inline-flex justify-center items-center bg-zinc-800 border border-white/10 text-white font-medium py-3 px-4 rounded hover:bg-accent hover:text-neutral-400 transition">
-                        <i class="fas fa-arrow-up-right-from-square mr-2"></i> Website
-                    </a>
-                </div>
             </div>
         </div>
     </section>
@@ -320,42 +336,29 @@
         </div>
     </footer>
 
-    <script>
-        function toggleDiplomarbeit(btn) {
-            const expanded = btn.getAttribute('aria-expanded') === 'true';
-            const panel = btn.nextElementSibling;
-            const chevron = btn.querySelector('i');
+    <!-- Project Detail Modal -->
+    <div id="projectModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-content">
+            <div class="flex items-start justify-between mb-6">
+                <div>
+                    <div class="flex gap-2 mb-3" id="modalBadges"></div>
+                    <h2 id="modalTitle" class="text-2xl font-bold"></h2>
+                </div>
+                <button onclick="closeModal()" aria-label="Schließen"
+                    class="ml-6 shrink-0 text-gray-500 hover:text-white transition text-xl cursor-pointer">
+                    <i class="fas fa-xmark"></i>
+                </button>
+            </div>
+            <p id="modalDescription" class="text-gray-400 text-sm leading-relaxed mb-6"></p>
+            <div id="modalBullets" class="space-y-3 mb-8"></div>
+            <div>
+                <p class="text-xs uppercase tracking-widest text-gray-500 mb-3">Stack</p>
+                <div id="modalStack" class="flex flex-wrap gap-2"></div>
+            </div>
+        </div>
+    </div>
 
-            if (expanded) {
-                panel.style.maxHeight = '0';
-                chevron.style.transform = '';
-                btn.setAttribute('aria-expanded', 'false');
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + 'px';
-                chevron.style.transform = 'rotate(180deg)';
-                btn.setAttribute('aria-expanded', 'true');
-            }
-        }
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
-
-        document.querySelectorAll('a[href="#about"]').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.getElementById('about');
-                const offset = target.offsetTop - Math.max(0, (window.innerHeight - target.offsetHeight) / 2);
-                window.scrollTo({ top: offset, behavior: 'smooth' });
-            });
-        });
-    </script>
+    <script src="main.js" defer></script>
 
 </body>
 
