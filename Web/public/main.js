@@ -103,7 +103,7 @@ document.addEventListener('keydown', function (e) {
 });
 
 
-function toggleDiplomarbeit(btn) {
+function toggleDescriptionDropdown(btn) {
     const expanded = btn.getAttribute('aria-expanded') === 'true';
     const panel = btn.nextElementSibling;
     const chevron = btn.querySelector('i');
