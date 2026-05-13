@@ -5,13 +5,13 @@
 
 import { projects } from '../data/projects.js';
 
-function renderCard(project) {
+function renderCard(project, index) {
     const stackTags = project.stack
         .map(s => `<span class="bg-white/5 text-gray-300 px-2 py-1 rounded text-xs">${s}</span>`)
         .join('');
 
     return `
-        <div class="glass-card p-8 rounded-xl reveal border-l-4 border-l-accent flex flex-col">
+        <div class="glass-card p-8 rounded-xl reveal border-l-4 border-l-accent flex flex-col" style="animation-delay: ${(index + 1) * 100}ms">
             <div class="flex justify-between items-start mb-4">
                 <span class="bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded">${project.period}</span>
                 <span class="bg-white/10 text-gray-400 text-xs font-bold px-3 py-1 rounded">${project.client}</span>
@@ -32,5 +32,5 @@ function renderCard(project) {
 export function renderProjects() {
     const grid = document.getElementById('projects-grid');
     if (!grid) return;
-    grid.innerHTML = projects.map(renderCard).join('');
+    grid.innerHTML = projects.map((p, i) => renderCard(p, i)).join('');
 }
