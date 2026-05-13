@@ -4,7 +4,6 @@ import { initAccordions } from './js/ui/accordion.js';
 import { initMobileNav } from './js/ui/nav.js';
 import { initReveal, initSmoothScroll } from './js/ui/animations.js';
 
-// renderProjects must run before initReveal so card .reveal elements exist in the DOM
 renderProjects();
 initReveal();
 initSmoothScroll();
