@@ -11,7 +11,7 @@ applyTo: '"Docs/**", "*.md", ".github/**/*.md", ".github/instructions/**", ".git
 - Write in **English**, present tense, imperative or second-person tone ("use", "add", "run" / "you can").
 - Be concise. Every sentence must add value. Omit filler phrases ("In this document, we will...").
 - Write for the reader who skims first. Put the most important information first in each section.
-- Do not duplicate content from authoritative external sources — link to them instead.
+- Do not duplicate content from authoritative external sources  -  link to them instead.
 
 ---
 
@@ -40,7 +40,7 @@ applyTo: '"Docs/**", "*.md", ".github/**/*.md", ".github/instructions/**", ".git
 
 - Use tables for comparisons, option lists, and reference data.
 - Always include a header row.
-- Keep cell content short — link to details rather than embedding long text.
+- Keep cell content short  -  link to details rather than embedding long text.
 
 ### Lists
 
@@ -54,7 +54,7 @@ applyTo: '"Docs/**", "*.md", ".github/**/*.md", ".github/instructions/**", ".git
 
 When writing or reviewing instruction files:
 
-- The `description` field is the **discovery surface** — the agent reads it to decide if the file is relevant. Use the "Use when: ..." pattern and include specific keyword-rich trigger phrases (framework names, task types, workflow names).
+- The `description` field is the **discovery surface**  -  the agent reads it to decide if the file is relevant. Use the "Use when: ..." pattern and include specific keyword-rich trigger phrases (framework names, task types, workflow names).
 - Quote YAML values that contain colons: `description: "Use when: writing tests"` (not `description: Use when: writing tests`).
 - One concern per file. Mixing unrelated concerns reduces relevance and pollutes the context window.
 - Use `applyTo` for file-pattern-based auto-attachment. Use `description` only (no `applyTo`) for on-demand, task-based discovery.
@@ -77,9 +77,9 @@ applyTo: "path/pattern/**"      # Optional: omit for on-demand discovery
 
 When writing prompt files:
 
-- The `description` field drives slash-command discoverability — be specific.
+- The `description` field drives slash-command discoverability  -  be specific.
 - Include `agent: "agent"` in frontmatter for multi-step tasks that require file creation or terminal commands.
-- List only the `tools` the prompt actually needs — avoid over-tooling.
+- List only the `tools` the prompt actually needs  -  avoid over-tooling.
 - The prompt body should be explicit and structured. Use numbered lists for multi-step tasks.
 - Parameterize with `$variable` placeholders where the prompt is meant to be reused.
 
@@ -104,7 +104,7 @@ When writing skill files:
 - Quote the `description` value (it usually contains colons).
 - Structure the body with a numbered **Steps** section. The agent follows explicit steps reliably.
 - Add a **Rules** section for guardrails (what NOT to do).
-- Reference bundled assets with relative Markdown links — do not inline large templates.
+- Reference bundled assets with relative Markdown links  -  do not inline large templates.
 
 ### Frontmatter template
 
@@ -127,8 +127,9 @@ description: "Use when: <specific workflow trigger>"
 
 ## What NOT to Do
 
+- Do not use non-standard Unicode characters such as en dashes (`–` U+2013), em dashes (`—` U+2014), curly quotes, or typographic symbols. Use plain ASCII equivalents: `-` for dashes, `"` and `'` for quotes. These cause encoding issues in many editors.
 - Do not use `---` horizontal rules decoratively (they should be used sparingly for major section breaks in long docs).
-- Do not indent code blocks with spaces — use fenced blocks (` ``` `) instead.
+- Do not indent code blocks with spaces  -  use fenced blocks (` ``` `) instead.
 - Do not add "last updated" dates at the bottom of files (let Git history track that).
-- Do not write `Note:`, `Important:`, or `Warning:` in plain text — use a blockquote (`>`) or a code comment for callouts.
-- Do not mirror content from external docs (e.g., copying the entire TailwindCSS API reference) — link to it.
+- Do not write `Note:`, `Important:`, or `Warning:` in plain text  -  use a blockquote (`>`) or a code comment for callouts.
+- Do not mirror content from external docs (e.g., copying the entire TailwindCSS API reference)  -  link to it.
